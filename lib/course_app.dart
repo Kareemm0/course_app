@@ -9,6 +9,7 @@ class CourseApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       theme: themeData(),
       routerConfig: router,
     );
