@@ -18,6 +18,9 @@ class CustomVisibleSkipButton extends StatelessWidget {
       visible: pageController.hasClients
           ? (pageController.page == 3 ? false : true)
           : true,
+      replacement: const SizedBox(
+        height: 30,
+      ),
       child: CustomSkipButton(
         text: 'Skip',
         onPressed: () {

@@ -1,6 +1,6 @@
 import 'package:course_app/features/onboarding/data/static/onboarding_data.dart';
 import 'package:course_app/features/onboarding/presentation/view/widgets/custom_buttons_row.dart';
-import 'package:course_app/features/onboarding/presentation/view/widgets/custom_cotsIndecator.dart';
+import 'package:course_app/features/onboarding/presentation/view/widgets/custom_dots_indecator.dart';
 import 'package:course_app/features/onboarding/presentation/view/widgets/custom_visible_skip_button.dart';
 import 'package:course_app/features/onboarding/presentation/view/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';

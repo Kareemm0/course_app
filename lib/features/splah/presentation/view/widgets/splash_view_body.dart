@@ -1,5 +1,6 @@
 import 'package:course_app/Core/app/app_routing.dart';
 import 'package:course_app/Core/app/routes.dart';
+import 'package:course_app/Core/utils/app_images.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/app_colors.dart';
@@ -27,7 +28,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
       height: MediaQuery.sizeOf(context).height,
       decoration: const BoxDecoration(color: AppColors.whiteColor),
       child: Center(
-        child: Image.asset('assets/images/image.png'),
+        child: Image.asset(AppImages.splashImage),
       ),
     );
   }

@@ -17,7 +17,7 @@ class PageViewItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(
-          height: 55,
+          height: 70,
         ),
         Image.asset(
           onboardingData[index].image,

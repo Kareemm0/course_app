@@ -18,8 +18,8 @@ class CustomNextButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 50,
-        height: 50,
+        width: 48,
+        height: 48,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32),
           color: backGroundColor,
