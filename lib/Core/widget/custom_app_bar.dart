@@ -5,9 +5,13 @@ PreferredSizeWidget? appBar(
   BuildContext context, {
   required String title,
   List<Widget>? actions,
+  bool automaticallyImplyLeading = true,
   Widget? leading,
 }) {
   return AppBar(
+    elevation: 0,
+    surfaceTintColor: Colors.white,
+    automaticallyImplyLeading: automaticallyImplyLeading,
     title: Text(
       title,
       style: AppTextStyles.styleBold20(context),

@@ -7,8 +7,8 @@ import '../../../../Core/styles/app_text_styles.dart';
 import '../../../../Core/utils/app_colors.dart';
 
 class CustomAuthText extends StatelessWidget {
-  final bool isLogin;
-  const CustomAuthText({super.key, required this.isLogin});
+  final bool isLoadgin;
+  const CustomAuthText({super.key, required this.isLoadgin});
 
   @override
   Widget build(BuildContext context) {
@@ -16,20 +16,22 @@ class CustomAuthText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          isLogin ? "Don’t have an account? " : "Already have an account ? ",
+          isLoadgin ? "Don’t have an account? " : "Already have an account ? ",
           style: AppTextStyles.styleRegular14(context).copyWith(
             fontWeight: FontWeight.w500,
             color: AppColors.grey6c,
           ),
         ),
         Text(
-          isLogin ? "Sign Up Here" : "Login Here",
+          isLoadgin ? "Sign Up Here" : "Login Here",
           style: AppTextStyles.styleRegular14(context).copyWith(
             fontWeight: FontWeight.w500,
             color: AppColors.yellowF8,
           ),
         ).onTap(() {
-          isLogin ? context.push(Routes.register) : context.push(Routes.login);
+          isLoadgin
+              ? context.push(Routes.register)
+              : context.push(Routes.login);
         })
       ],
     );

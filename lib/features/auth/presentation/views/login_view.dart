@@ -40,6 +40,7 @@ class LoginView extends StatelessWidget {
                     ),
                     height(4),
                     CustomTextFormFiled(
+                      hintText: "demo@mail.com",
                       controller: cubit.emailController,
                     ),
                     height(64),
@@ -51,6 +52,7 @@ class LoginView extends StatelessWidget {
                     ),
                     height(4),
                     CustomTextFormFiled(
+                      hintText: "**********************",
                       controller: cubit.passwordController,
                     ),
                     height(4),
@@ -65,7 +67,7 @@ class LoginView extends StatelessWidget {
                     const CustomSocialMediaRowWidget(),
                     height(heightSize(context) * 0.1),
                     const CustomAuthText(
-                      isLogin: true,
+                      isLoadgin: true,
                     ),
                   ],
                 ),
