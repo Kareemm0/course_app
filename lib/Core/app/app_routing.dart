@@ -1,4 +1,5 @@
 import 'package:course_app/Core/app/routes.dart';
+import 'package:course_app/features/auth/presentation/views/forget_password_screen.dart';
 import 'package:course_app/features/auth/presentation/views/login_view.dart';
 import 'package:course_app/features/auth/presentation/views/register_screen.dart';
 import 'package:course_app/features/onboarding/presentation/view/onboarding_view.dart';
@@ -25,6 +26,10 @@ final GoRouter router = GoRouter(
     GoRoute(
       path: Routes.register,
       builder: (context, state) => const RegisterScreen(),
+    ),
+    GoRoute(
+      path: Routes.forgetPassword,
+      builder: (context, state) => const ForgetPasswordScreen(),
     ),
   ],
 );
