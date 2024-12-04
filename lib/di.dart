@@ -1,3 +1,8 @@
+import 'package:course_app/features/auth/data/datasoruce/base/login_data_source.dart';
+import 'package:course_app/features/auth/data/datasoruce/source_impl/login_data_source_impl.dart';
+import 'package:course_app/features/auth/data/repo_impl/login_repo_impl.dart';
+import 'package:course_app/features/auth/domain/repos/login_repo.dart';
+import 'package:course_app/features/auth/presentation/cubit/login/login_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -24,15 +29,15 @@ Future<void> _registerSingletons() async {
   final SharedPreferences preferences = await SharedPreferences.getInstance();
   BaseOptions options = BaseOptions(
     validateStatus: (status) {
-      // if (status == null) {
-      //   return false;
-      // }
-      // if (status == 422 || status == 302) {
-      //   return true;
-      // } else {
-      //   return status >= 200 && status < 300;
-      // }
-      return status != null && status < 500;
+      if (status == null) {
+        return false;
+      }
+      if (status == 422 || status == 302) {
+        return true;
+      } else {
+        return status >= 200 && status < 300;
+      }
+      //return status != null && status < 500;
     },
     baseUrl: EndPoints.baseUrl,
     followRedirects: false,
@@ -49,8 +54,14 @@ Future<void> _registerSingletons() async {
   getIt.registerSingleton<SharedPreferences>(preferences);
 }
 
-void _registerDataSources() {}
+void _registerDataSources() {
+  getIt.registerSingleton<LoginDataSource>(LoginDataSourceImpl(getIt()));
+}
 
-void _registerRepos() {}
+void _registerRepos() {
+  getIt.registerSingleton<LoginRepo>(LoginRepoImpl(getIt()));
+}
 
-void _registerFactory() {}
+void _registerFactory() {
+  getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+}

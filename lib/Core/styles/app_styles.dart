@@ -11,11 +11,15 @@ ThemeData themeData(BuildContext context) {
       hintStyle: AppTextStyles.styleRegular14(context).copyWith(
         color: AppColors.grey8,
       ),
-      errorBorder: outLineInputBorder(),
+      errorBorder: outLineInputBorder(
+        color: AppColors.redED,
+      ),
       enabledBorder: outLineInputBorder(),
       focusedBorder: outLineInputBorder(),
       disabledBorder: outLineInputBorder(),
-      focusedErrorBorder: outLineInputBorder(),
+      focusedErrorBorder: outLineInputBorder(
+        color: AppColors.redED,
+      ),
       outlineBorder: const BorderSide(),
       activeIndicatorBorder: const BorderSide(),
     ),
