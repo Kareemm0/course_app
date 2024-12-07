@@ -17,12 +17,15 @@ class PageViewItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(
-          height: 70,
+          height: 85,
         ),
         Image.asset(
           onboardingData[index].image,
           height: 200,
           width: 200,
+        ),
+        const SizedBox(
+          height: 35,
         ),
         Text(
           onboardingData[index].title,
